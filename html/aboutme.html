@@ -1,0 +1,192 @@
+<!-- Lauren Webb IS 201(Section 001) 12/13/23 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Add CSS styling for image container */
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container div {
+            text-align: center;
+            width: 35%; /* Adjust the width as needed */
+            margin-bottom: 10px;
+        }
+
+        .image-container img {
+            width: 100%; /* Ensure the image takes up 100% of the container */
+            height: auto; /* Maintains the aspect ratio */
+        }
+
+        /* Add CSS styling for slideshow */
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+
+        .mySlides img {
+            width: 100%; /* Set the width of the image to 100% */
+            height: auto; /* Maintain the aspect ratio */
+        }
+
+        /* Add styling for navigation arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+    </style>
+</head>
+<body class="body">
+    <nav>
+        <a href="../index.html" id="top">Home</a> |
+        <a href="resume.html">Resume</a> |
+        <a href="aboutme.html">About Me</a>
+    </nav>
+    
+    <h4>About Me</h4>
+    <p>Hello! I'm Lauren—it's so nice to meet you! Let me tell you a little bit about me (this is an about me page after all...)</p>
+    <p>While I was born in Wenatchee, WA, I call Ohio home, and I'm here in Provo, UT for school. This is my third semester as a Pre-business major at BYU, and I will apply to the Marketing and Experience Design programs this spring.</p>
+
+    <div class="image-container">
+        <div>
+            <p class="box1">This is me when I was little...</p>
+            <img src="../images/LittleMe.JPG" alt="Little Me" class="box2">
+        </div>
+        <div>
+            <p class="box1">And this is me now!</p>
+            <img src="../images/MeNow(horse).jpg" alt="Me Now with Horse" class="box2">
+        </div>
+    </div>
+    
+    <p>I am passionate about so many things. My faith is a big part of my life, and so are the people I've met along the way. Here's a peak at my life lately.</p>
+
+    <!-- Image Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="../images/FamilyPic.JPG" alt="Slide 1">
+        </div>
+        <div class="mySlides">
+            <img src="../images/BYUFootballGame.jpeg" alt="Slide 2">
+        </div>
+        <div class="mySlides">
+            <img src="../images/LanternFest.jpeg" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img src="../images/LizandClaireFamPhotos.jpg" alt="Slide 4">
+        </div>
+        <div class="mySlides">
+            <img src="../images/MaddiesBirthday.jpeg" alt="Slide 6">
+        </div>
+        <div class="mySlides">
+            <img src="../images/hammocking.jpeg" alt="Slide 7">
+        </div>
+        <div class="mySlides">
+            <img src="../images/Tanner.jpeg" alt="Slide 8">
+        </div>
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <ol>
+        <li>Family
+            <ul>
+                <li>My silbings mean so much to me, and our family is growing by the minute. I am so happy that my brothers and sisters have found significant others that they love and cherish. I can't wait to meet my future nieces nephews!!</li>
+            </ul>
+        </li>
+        <li>BYU
+            <ul>
+                <li>If you can't tell, this is a picture of my friends and I at a BYU football game! I love this school and I love attending the sporting events.</li>
+            </ul>
+        </li>
+        <li>Art
+            <ul>
+                <li>Ever since I can remember, I have always had a passion for all things artistic and creative. Beautiful scenes inspire me, and I will always appreciate the beauty around me.</li>
+            </ul>
+        </li>
+        <li>Aspen Grove
+            <ul>
+                <li>I worked at a Familiy Camp called Aspen Grove this past summer. This job basically changed my life—I met so many amazing people and learned so much about myself.</li>
+            </ul>
+        </li>
+        <li>Friends
+            <ul>
+                <li>Happy birthday Maddie!! I enjoy celebrating the people that I love, and I will do anythign for my sweet sweet friends that I've made. I feel so blessed to have the support system that I do.</li>
+            </ul>
+        </li>
+        <li>Nature
+            <ul>
+                <li>I recently realized how much I cherish time outside. The world is a beautiful place! If you are going camping anytime soon, I would love to join you.</li>
+            </ul>
+        </li>
+        <li>Tanner
+            <ul>
+                <li>Meet my boyfriend!! He is my favorite.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <a href="#top">Back to Top</a>
+</body>
+</html>

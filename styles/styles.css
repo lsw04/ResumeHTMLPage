@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: hsl(234, 20%, 30%);
+    background-color: lavenderblush
+}
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+a {
+    color: #3D405B;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+/* a:visited {
+    color: blue;
+} */
+.resumelistheading{
+    font-weight: bolder;
+    font-style: normal;
+}
+.underline {text-decoration: underline;}
+.bold {font-weight: bold;}
+.justify {text-align: justify;}
+.italicize {font-style: italic;}
+
+.homebg {
+    background-image: url('../images/sunset.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.box1{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+.box2{
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    /* you should give specific titles to styles to know what you're talking about */
+}
+.box3{
+    margin: 50px;
+    /*commenting here*/
+}
